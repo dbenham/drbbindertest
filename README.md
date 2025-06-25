@@ -4,7 +4,7 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://binderhub.nairrpilot.org/v2/gh/dbenham/drbbindertest.git/HEAD) <--- Click me for NAIRR sandbox deployment
 
-![launch nairr sandbox](./nairr-launch.png) 
+![launch nairr sandbox](./nairr-launch-logo.png) 
 
 
 2025-05-14T17:31:53-04:00
