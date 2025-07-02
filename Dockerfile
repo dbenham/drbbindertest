@@ -25,6 +25,7 @@ WORKDIR /home/jovyan
 
 # Copy repository contents (if needed, optional) and set ownership to jovyan
 COPY --chown=jovyan:jovyan . /home/jovyan
+COPY --chown=jovyan:jovyan . /srv/repo
 
 # Switch to non-root user
 USER jovyan
