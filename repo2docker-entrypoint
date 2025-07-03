@@ -1,0 +1,6 @@
+#!/bin/bash
+# Copy repo files on container start
+cp -r /srv/repo/* /home/jovyan/
+
+# Execute the original entrypoint
+exec start-notebook.sh "$@"
