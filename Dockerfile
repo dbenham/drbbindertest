@@ -4,8 +4,7 @@ FROM jupyter/base-notebook
 USER jovyan
 
 # Copy repository contents
-COPY . /srv/repo
-COPY . /home/jovyan
+COPY --chown jovyan . /srv/repo
 
 ENV JUPYTER_TOKEN=""
 ENV JUPYTER_PASSWORD=""
