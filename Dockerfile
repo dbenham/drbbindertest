@@ -3,9 +3,6 @@ FROM jupyter/base-notebook
 # Set a non-interactive environment variable for apt-get
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Create a non-root user 'jovyan' with a home directory
-RUN useradd -ms /bin/bash jovyan
-
 # Install any system dependencies that you might need (minimal)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
