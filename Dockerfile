@@ -1,5 +1,4 @@
-# Use a lighter Python base image
-FROM python:3.9-slim
+FROM jupyter/base-notebook
 
 # Set a non-interactive environment variable for apt-get
 ENV DEBIAN_FRONTEND=noninteractive
