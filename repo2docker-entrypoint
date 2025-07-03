@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo ">>> RUNNING repo2docker-entrypoint"
+
 # Copy repo files on container start
 cp -r /srv/repo/* /home/jovyan/
 
