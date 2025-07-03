@@ -9,3 +9,5 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Copy repository contents
 COPY . /srv/repo
 
+ENV JUPYTER_TOKEN=""
+ENV JUPYTER_PASSWORD=""
