@@ -8,7 +8,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Copy repository contents (if needed, optional) and set ownership to jovyan
 COPY . /srv/repo
-RUN cp -r /srv/repo/* /home/jovyan/
 
 # Start the Jupyter Notebook server
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''"]
