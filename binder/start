@@ -9,5 +9,5 @@ fi
 
 ls -la /home/jovyan
 
-exec start-notebook.sh "$@"
+exec "$@"
 
