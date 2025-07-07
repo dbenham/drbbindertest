@@ -1,4 +1,5 @@
 # drbbindertest
+---
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dbenham/drbbindertest/HEAD?urlpath=%2Fdoc%2Ftree%2FMyNotebook.ipynb) <--- Click me for mybinder deployment
 
@@ -20,5 +21,5 @@
 
 
 
-
+---
 2025-05-14T17:31:53-04:00
