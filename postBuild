@@ -1,5 +1,6 @@
 #!/bin/bash
-# Copy the entire repo to jovyan's home directory
+# Copy the entire repo to jovyan's home directory -- 2025-08-11T18:31:50-04:00
 cp -r /srv/repo /home/jovyan/src-repo
+
 # Ensure jovyan owns the copied files
 chown -R jovyan:users /home/jovyan/src-repo
