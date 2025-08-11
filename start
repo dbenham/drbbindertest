@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Copy repo after PVC is mounted (only if not already copied)
+if [ -d "/srv/repo" ] && [ ! -d "/home/jovyan/src-repo" ]; then
+    echo "Copying repository to home directory..."
+    cp -r /srv/repo /home/jovyan/src-repo
+    echo "Copy completed"
+fi
+
+# Start Jupyter
+exec "$@"
