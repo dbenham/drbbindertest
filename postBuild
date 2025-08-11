@@ -1,3 +1,0 @@
-#!/bin/bash
-echo "postBuild is running!" > /home/jovyan/postbuild-test.txt
-ls -la /srv/repo > /home/jovyan/srv-repo-contents.txt
