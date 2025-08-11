@@ -1,12 +1,10 @@
 FROM jupyter/base-notebook
 
-USER root
-
-# This will run after the repo is copied to /srv/repo
-# Copy the repo to jovyan's home directory
-RUN mkdir -p /home/jovyan && \
-    cp -r /srv/repo /home/jovyan/src-repo && \
-    chown -R jovyan:users /home/jovyan/src-repo
-
+# Switch to non-root user
 USER jovyan
-WORKDIR /home/jovyan
+
+# Copy repository contents
+COPY --chown=1000:100 . /srv/repo
+
+ENV JUPYTER_TOKEN=""
+ENV JUPYTER_PASSWORD=""
