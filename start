@@ -1,9 +1,0 @@
-#!/bin/bash
-# Auto-execute notebook on every container start
-if [ -f /home/jovyan/index.ipynb ]; then
-    cd /home/jovyan
-    jupyter nbconvert --to notebook --execute --inplace index.ipynb >/dev/null 2>&1 &
-fi
-
-# Start the normal jupyter process
-exec "$@"
