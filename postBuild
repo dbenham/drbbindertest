@@ -1,0 +1,5 @@
+#!/bin/bash
+# Force clone if not already present
+if [ ! -d "/home/jovyan/repo-files" ]; then
+    git clone https://github.com/dbenham/drbbindertest.git /home/jovyan/repo-files
+fi
