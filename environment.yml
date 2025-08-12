@@ -3,9 +3,6 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - jupyter
-  - nbconvert<7.0  # Use older nbconvert
-  - mistune<2.0    # Pin mistune to v1.x
   - numpy
   - psutil
   - toolz
