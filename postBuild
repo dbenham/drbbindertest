@@ -1,5 +1,0 @@
-#!/bin/bash
-# postBuild - runs during image build
-if [ -f index.ipynb ]; then
-    /srv/conda/envs/notebook/bin/python -m nbconvert --to notebook --execute --inplace index.ipynb
-fi

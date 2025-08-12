@@ -1,0 +1,32 @@
+#!/bin/bash
+# start - runs every time container starts
+
+# Execute index.ipynb if it exists
+if [ -f /home/jovyan/index.ipynb ]; then
+    echo "Auto-executing index.ipynb..."
+    cd /home/jovyan
+    /srv/conda/envs/notebook/bin/python -c "
+import json
+import sys
+sys.path.insert(0, '.')
+
+try:
+    with open('index.ipynb', 'r') as f:
+        nb = json.load(f)
+    
+    for i, cell in enumerate(nb.get('cells', [])):
+        if cell.get('cell_type') == 'code':
+            source = ''.join(cell.get('source', []))
+            if source.strip():
+                try:
+                    exec(source)
+                except Exception as e:
+                    print(f'Error in cell {i+1}: {e}')
+    print('Auto-execution completed')
+except Exception as e:
+    print(f'Error: {e}')
+" > /dev/null 2>&1 &
+fi
+
+# Start the normal Jupyter process
+exec "\$@"
