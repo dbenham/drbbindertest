@@ -12,3 +12,5 @@ dependencies:
   - partd
   - bokeh
   - dask
+  - opencv-python
+  - tensorflow
